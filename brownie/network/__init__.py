@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+import importlib
+from typing import Dict, List, Optional
+from pathlib import Path
+
 from .account import Accounts
 from .main import connect, disconnect, gas_limit, gas_price, is_connected, show_active  # NOQA 401
 from .rpc import Rpc
@@ -13,10 +17,6 @@ accounts = Accounts()
 rpc = Rpc()
 history = TxHistory()
 chain = Chain()
-
- import importlib
-from typing import Dict, List, Optional
-from pathlib import Path
 
 
 class BrownieMiddlewareBase:
